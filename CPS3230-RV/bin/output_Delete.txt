@@ -1,0 +1,5 @@
+[testing]AUTOMATON::> testing() STATE::>DeleteRequest
+[testing]MOVED ON METHODCALL: int Test.DeleteApiCall(String) TO STATE::> !!!SYSTEM REACHED BAD STATE!!! invalidDelete 
+aspects._asp_Delete0.ajc$before$aspects__asp_Delete0$2$6e58cdab(_asp_Delete0.aj:22)
+Test.main(Test.java:21) 
+[testing]AUTOMATON::> testing() STATE::>invalidDelete

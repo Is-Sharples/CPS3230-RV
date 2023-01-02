@@ -1,0 +1,9 @@
+digraph _logic_testing {
+rankdir=LR;
+node [shape = circle]; DeleteRequest;
+node [shape = octagon]; invalidDelete;
+node [shape = point]; _s_s;
+_s_s -> DeleteRequest;
+DeleteRequest -> DeleteRequest [ label = "(1) goodDelete\\userId == \" 00de4d33-5d10-4151-ad8f-39dca960ddce \" "];
+DeleteRequest -> invalidDelete [ label = "(2) goodDelete\\userId != \" 00de4d33-5d10-4151-ad8f-39dca960ddce \" "];
+}

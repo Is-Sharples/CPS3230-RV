@@ -1,0 +1,21 @@
+GLOBAL {
+	Events{
+		goodDelete(String userId) = {*.DeleteApiCall(String userId)}
+	}
+	
+	PROPERTY testing{
+		STATES {
+			BAD {
+				invalidDelete
+			}
+			STARTING {
+				DeleteRequest
+			}
+		}
+		TRANSITIONS{
+			DeleteRequest -> DeleteRequest [goodDelete\userId == "00de4d33-5d10-4151-ad8f-39dca960ddce"]
+			DeleteRequest -> invalidDelete [goodDelete\userId != "00de4d33-5d10-4151-ad8f-39dca960ddce"]
+			
+		}
+	}
+}

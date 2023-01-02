@@ -1,0 +1,6 @@
+[testing]AUTOMATON::> testing() STATE::>postCall
+[testing]MOVED ON METHODCALL: boolean Test.PostApiCall(boolean) TO STATE::> postCall
+[testing]AUTOMATON::> testing() STATE::>postCall
+[testing]MOVED ON METHODCALL: boolean Test.PostApiCall(boolean) TO STATE::> !!!SYSTEM REACHED BAD STATE!!! invalidPost 
+aspects._asp_Post0.ajc$before$aspects__asp_Post0$2$45b5750d(_asp_Post0.aj:22)
+Test.main(Test.java:27) 

@@ -1,0 +1,32 @@
+GLOBAL {
+	Events{
+		goodLogin(boolean val) = {*.LoginFunction(boolean val)}
+		goodApiPost(boolean value) = {*.PostApiCall(boolean value)}
+		goodDelete(String userId) = {*.DeleteApiCall(String userId)}
+	}
+	
+	PROPERTY testing{
+		STATES {
+			BAD {
+				invalidLogin
+			}
+			NORMAL {
+				AlertScreen
+				PostRequest
+				DeleteRequest
+			}
+			STARTING {
+				LoginPage
+			}
+		}
+		TRANSITIONS{
+			LoginPage -> AlertScreen [goodLogin\val == true]
+			LoginPage -> invalidLogin [goodLogin\val == false]
+			AlertScreen -> AlertScreen [goodApiPost\value == true]
+			AlertScreen -> invalidPost [goodApiPost\value == false]
+			AlertScreen -> AlertScreen [goodDelete\userId == "00de4d33-5d10-4151-ad8f-39dca960ddce"]
+			AlertScreen -> invalidDelete [goodDelete\userId != "00de4d33-5d10-4151-ad8f-39dca960ddce"]
+			
+		}
+	}
+}

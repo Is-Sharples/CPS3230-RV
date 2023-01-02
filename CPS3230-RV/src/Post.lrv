@@ -1,0 +1,20 @@
+GLOBAL {
+	Events{
+		goodApiPost(boolean value) = {*.PostApiCall(boolean value)}		
+	}
+	
+	PROPERTY testing{
+		STATES {
+			BAD {				
+				invalidPost
+			}
+			STARTING {
+				postCall
+			}
+		}
+		TRANSITIONS{
+			postCall -> postCall [goodApiPost\value == true]
+			postCall -> invalidPost [goodApiPost\value == false]
+		}
+	}
+}

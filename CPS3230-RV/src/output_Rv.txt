@@ -1,0 +1,12 @@
+[testing]AUTOMATON::> testing() STATE::>LoginPage
+[testing]AUTOMATON::> testing() STATE::>LoginPage
+[testing]AUTOMATON::> testing() STATE::>LoginPage
+[testing]MOVED ON METHODCALL: boolean Test.LoginFunction(boolean) TO STATE::> AlertScreen
+[testing]AUTOMATON::> testing() STATE::>AlertScreen
+[testing]MOVED ON METHODCALL: boolean Test.PostApiCall(boolean) TO STATE::> AlertScreen
+[testing]AUTOMATON::> testing() STATE::>AlertScreen
+[testing]MOVED ON METHODCALL: boolean Test.PostApiCall(boolean) TO STATE::> !!!SYSTEM REACHED BAD STATE!!! invalidPost 
+aspects._asp_Rv0.ajc$before$aspects__asp_Rv0$4$45b5750d(_asp_Rv0.aj:42)
+Test.main(Test.java:27) 
+[testing]AUTOMATON::> testing() STATE::>invalidPost
+[testing]AUTOMATON::> testing() STATE::>invalidPost
